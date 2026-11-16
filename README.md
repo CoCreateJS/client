@@ -162,7 +162,7 @@ You can begin with HTML and progressively introduce JavaScript whenever needed.
 
 ### Source Code
 
-**GitHub:** https://github.com/CoCreateJS/Client
+**GitHub:** https://github.com/CoCreateJS/client
 
 ---
 
@@ -1410,7 +1410,7 @@ Data persistence and remote synchronization require an appropriately configured 
 
 ### Explore the Source
 
-https://github.com/CoCreateJS/Client
+https://github.com/CoCreateJS/client
 
 ---
 
@@ -1460,7 +1460,7 @@ The client focuses on browser-side application development and can be used indep
 
 **CoCreate Client**
 
-https://github.com/CoCreateJS/Client
+https://github.com/CoCreateJS/client
 
 **CoCreateJS Organization**
 

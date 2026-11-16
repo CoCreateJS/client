@@ -15,10 +15,10 @@
   "homepage": "https://CoCreateJS.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreateJS/CoCreate-client.git"
+    "url": "git+https://github.com/CoCreateJS/client.git"
   },
   "bugs": {
-    "url": "https://github.com/CoCreateJS/CoCreate-client/issues"
+    "url": "https://github.com/CoCreateJS/client/issues"
   },
   "author": "CoCreate LLC",
   "license": "AGPL-3.0",

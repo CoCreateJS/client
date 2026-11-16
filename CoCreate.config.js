@@ -77,12 +77,12 @@ module.exports = {
     projects: {
         client: {
             path: "../client",
-            repo: "github.com/CoCreateJS/CoCreate-client.git",
+            repo: "github.com/CoCreateJS/client.git",
             exclude: ["git"]
         },
         app: {
             path: "../app",
-            repo: "github.com/cocreatejs/CoCreate-app.git",
+            repo: "github.com/CoCreateJS/app.git",
             exclude: ["git"]
         }
     },
