@@ -12,7 +12,7 @@ function getUtilsChunkName(module) {
     const resource = module.nameForCondition?.() || module.resource || "";
     const normalizedResource = resource.replace(/\\/g, "/");
     const match = normalizedResource.match(
-        /\/CoCreate-modules\/utils\/src\/modules\/(.+?)\.js$/
+        /\/modules\/utils\/src\/modules\/(.+?)\.js$/
     );
 
     if (!match) {
@@ -38,7 +38,7 @@ function getEditorChunkName(module) {
     const resource = module.nameForCondition?.() || module.resource || "";
     const normalizedResource = resource.replace(/\\/g, "/");
     const match = normalizedResource.match(
-        /\/CoCreate-modules\/editor\/src\/editors\/(.+?)\.js$/
+        /\/modules\/editor\/src\/editors\/(.+?)\.js$/
     );
 
     if (!match) {
@@ -61,7 +61,7 @@ function getEditorChunkName(module) {
 
 function getChunkFilename({ chunk }) {
     const name = String(chunk.name ?? chunk.id)
-        .replace(/^CoCreate-modules_/, "")
+        .replace(/^modules_/, "")
         .replace(/_src_(?:editors|modules)_/g, "-")
         .replace(/_src_/g, "-")
         .replace(/_node_modules_ws_browser_js$/, "-ws-browser")
@@ -247,7 +247,7 @@ export default async (env, argv) => {
                 cacheGroups: {
                     defaultVendors: false,
                     utils: {
-                        test: /[\\/]CoCreate-modules[\\/]utils[\\/]src[\\/]modules[\\/]/,
+                        test: /[\\/]modules[\\/]utils[\\/]src[\\/]modules[\\/]/,
                         name: getUtilsChunkName,
                         chunks: "all",
                         enforce: true,
@@ -255,7 +255,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     editor: {
-                        test: /[\\/]CoCreate-modules[\\/]editor[\\/]src[\\/]editors[\\/]/,
+                        test: /[\\/]modules[\\/]editor[\\/]src[\\/]editors[\\/]/,
                         name: getEditorChunkName,
                         chunks: "all",
                         enforce: true,
@@ -263,7 +263,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     editorCore: {
-                        test: /[\\/]CoCreate-modules[\\/]editor[\\/]src[\\/](events|selection|textChange)\.js$/,
+                        test: /[\\/]modules[\\/]editor[\\/]src[\\/](events|selection|textChange)\.js$/,
                         name: "editor-core",
                         chunks: "all",
                         enforce: true,
@@ -271,7 +271,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     positionEvents: {
-                        test: /[\\/]CoCreate-modules[\\/]position[\\/]src[\\/]helpers[\\/]events\.js$/,
+                        test: /[\\/]modules[\\/]position[\\/]src[\\/]helpers[\\/]events\.js$/,
                         name: "position-events",
                         chunks: "all",
                         enforce: true,
@@ -279,7 +279,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     usersSessionCookie: {
-                        test: /[\\/]CoCreate-modules[\\/]users[\\/]src[\\/]client[\\/]sessionCookie\.js$/,
+                        test: /[\\/]modules[\\/]users[\\/]src[\\/]client[\\/]sessionCookie\.js$/,
                         name: "users-session-cookie",
                         chunks: "all",
                         enforce: true,
@@ -287,7 +287,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     speechRecognition: {
-                        test: /[\\/]CoCreate-modules[\\/]speech-recognition[\\/]src[\\/]/,
+                        test: /[\\/]modules[\\/]speech-recognition[\\/]src[\\/]/,
                         name: "speech-recognition",
                         chunks: "all",
                         enforce: true,
@@ -295,7 +295,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     speechSynthesis: {
-                        test: /[\\/]CoCreate-modules[\\/]speech-synthesis[\\/]src[\\/]/,
+                        test: /[\\/]modules[\\/]speech-synthesis[\\/]src[\\/]/,
                         name: "speech-synthesis",
                         chunks: "all",
                         enforce: true,
@@ -303,7 +303,7 @@ export default async (env, argv) => {
                         reuseExistingChunk: true
                     },
                     ws: {
-                        test: /[\\/]CoCreate-modules[\\/]socket[\\/]node_modules[\\/]ws[\\/]browser\.js$/,
+                        test: /[\\/]modules[\\/]socket[\\/]node_modules[\\/]ws[\\/]browser\.js$/,
                         name: "socket-ws-browser",
                         chunks: "all",
                         enforce: true,
